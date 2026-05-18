@@ -157,40 +157,40 @@ with col2:
     slabth = st.number_input("SLABTH (ความหนา SLAB: mm)", min_value=200.0, max_value=220.0, value=210.0, step=0.5)
     slabwi = st.number_input("SLABWI (ความกว้าง SLAB: mm)", value=1250.0, step=10.0)
 with col3:
-    slabwe = st.number_input("SLABWE (น้ำหนัก SLAB: ton)", value=25.5, step=0.1)
-    slfuti = st.number_input("SLFUTI (เวลาในเตา)", value=1.0, step=0.1)
+    slabwe = st.number_input("SLABWE (น้ำหนัก SLAB: kg)", value=22000.0, step=0.1)
+    slfuti = st.number_input("SLFUTI (เวลาในเตา)", value=3.5, step=0.1)
 with col4:
     hnspdi = st.number_input("HNSPDI (ความหนา)", value=3.2, step=0.1)
-    wnspdi = st.number_input("WNSPDI (ความกว้าง)", value=1215.0, step=5.0)
+    wnspdi = st.number_input("WNSPDI (ความกว้าง)", value=1219.0, step=5.0)
 
 # ส่วนที่ 2: ค่าพารามิเตอร์กระบวนการรีด (ควบคุมได้หน้างาน)
 st.subheader("⚙️ 2. พารามิเตอร์การผลิตปัจจุบัน (Controllable Setup Parameters)")
 st.caption("ระบุค่าที่กำลังตั้งค่าอยู่ในปัจจุบันเพื่อตรวจสอบจุดเสี่ยง")
 
-tab_temp, tab_draft, tab_roll = st.tabs(["🌡️ อุณหภูมิและความเร็ว", "📉 แรงกดลูกรีด (RM Draft)", "🔄 กระแสลูกรีด (RM Current)"])
+tab_temp, tab_draft, tab_roll = st.tabs(["🌡️ อุณหภูมิและความเร็ว", "📉 อัตราการกดลูกรีด (RM Draft)", "🔄 ความเร็วลูกรีด (RM Speed)"])
 
 with tab_temp:
     c1, c2, c3, c4 = st.columns(4)
-    with c1: ft_head = st.number_input("FT_HEAD (องศา)", value=860.0, step=5.0)
-    with c2: ct_head = st.number_input("CT_HEAD (องศา)", value=620.0, step=5.0)
-    with c3: xvptf8 = st.number_input("XVPTF8 (ความเร็วลูกรีด)", value=12.5, step=0.2)
-    with c4: rmextg = st.number_input("RMEXTG (อุณหภูมิขาออก RM)", value=1020.0, step=5.0)
+    with c1: ft_head = st.number_input("FT_HEAD (องศา)", value=860.0, step=10.0)
+    with c2: ct_head = st.number_input("CT_HEAD (องศา)", value=620.0, step=10.0)
+    with c3: xvptf8 = st.number_input("XVPTF8 (ความเร็วลูกรีด)", value=8.5, step=0.5)
+    with c4: rmextg = st.number_input("RMEXTG (BarThk)", value=32.0, step=1.0)
 
 with tab_draft:
     c1, c2, c3, c4, c5 = st.columns(5)
-    with c1: psdrft1 = st.number_input("PSDRFT1 (Pass1 Draft)", value=48.2, step=0.5)
-    with c2: psdrft2 = st.number_input("PSDRFT2 (Pass2 Draft)", value=35.1, step=0.5)
-    with c3: psdrft3 = st.number_input("PSDRFT3 (Pass3 Draft)", value=24.6, step=0.5)
-    with c4: psdrft4 = st.number_input("PSDRFT4 (Pass4 Draft)", value=16.8, step=0.5)
-    with c5: psdrft5 = st.number_input("PSDRFT5 (Pass5 Draft)", value=11.2, step=0.5)
+    with c1: psdrft1 = st.number_input("PSDRFT1 (Pass1 Draft)", value=42.2, step=0.5)
+    with c2: psdrft2 = st.number_input("PSDRFT2 (Pass2 Draft)", value=48.1, step=0.5)
+    with c3: psdrft3 = st.number_input("PSDRFT3 (Pass3 Draft)", value=48.6, step=0.5)
+    with c4: psdrft4 = st.number_input("PSDRFT4 (Pass4 Draft)", value=42.8, step=0.5)
+    with c5: psdrft5 = st.number_input("PSDRFT5 (Pass5 Draft)", value=32.2, step=0.5)
 
 with tab_roll:
     c1, c2, c3, c4, c5 = st.columns(5)
-    with c1: psrcms1 = st.number_input("PSRCMS1 (Pass1 Current)", value=2100.0, step=50.0)
-    with c2: psrcms2 = st.number_input("PSRCMS2 (Pass2 Current)", value=1950.0, step=50.0)
-    with c3: psrcms3 = st.number_input("PSRCMS3 (Pass3 Current)", value=1800.0, step=50.0)
-    with c4: psrcms4 = st.number_input("PSRCMS4 (Pass4 Current)", value=1650.0, step=50.0)
-    with c5: psrcms5 = st.number_input("PSRCMS5 (Pass5 Current)", value=1400.0, step=50.0)
+    with c1: psrcms1 = st.number_input("PSRCMS1 (Pass1 Speed)", value=1.5, step=0.1)
+    with c2: psrcms2 = st.number_input("PSRCMS2 (Pass2 Speed)", value=1.5, step=0.1)
+    with c3: psrcms3 = st.number_input("PSRCMS3 (Pass3 Speed)", value=1.5, step=0.1)
+    with c4: psrcms4 = st.number_input("PSRCMS4 (Pass4 Speed)", value=1.5, step=0.1)
+    with c5: psrcms5 = st.number_input("PSRCMS5 (Pass5 Speed)", value=2.5, step=0.1)
 
 # เติมตัวแปรที่เหลือในโมเดลด้วยค่าสถิติเริ่มต้น (Default หรือ Median) เพื่อไม่ให้โมเดลพัง
 base_data = {
@@ -200,11 +200,11 @@ base_data = {
     'PSDRFT4': psdrft4, 'PSDRFT5': psdrft5, 'PSRCMS1': psrcms1, 'PSRCMS2': psrcms2, 'PSRCMS3': psrcms3,
     'PSRCMS4': psrcms4, 'PSRCMS5': psrcms5,
     # ตัวแปรเสริมอื่นๆ (เซ็ตเป็นค่ากลางเริ่มต้น)
-    'TEM_DIS': 1280.0, 'PSDRFT': 135.0, 'CORPSR_M1': 0.0, 'CORPSR_M2': 0.0, 'CORPSR_M3': 0.0,
-    'CORPSR_M4': 0.0, 'CORPSR_M5': 0.0, 'RIDAMF1': 0.0, 'RIDAMF2': 0.0, 'RIDAMF3': 0.0, 'RIDAMF4': 0.0,
-    'RIDAMF5': 0.0, 'RIDAMF6': 0.0, 'RIDAMF7': 0.0, 'CBTHSP': 80.0, 'CBRUSP': 82.0, 'DESCH1_MIN': 165.0,
-    'DESCH2_MIN': 165.0, 'TNVTRP1': 0.0, 'TNVTRP2': 0.0, 'TNVTRP3': 0.0, 'TNVTRP4': 0.0, 'TNVTRP5': 0.0,
-    'TNVTRP6': 0.0, 'TNVTRP7': 0.0, 'FTGM': 3.2, 'LSP_Body': 11.5, 'Entry_Body': 2.5, 'FT_BODY': 855.0,
+    'TEM_DIS': 1280.0, 'PSDRFT': 32.0, 'CORPSR_M1': 8500.0, 'CORPSR_M2': 10000.0, 'CORPSR_M3': 11000.0,
+    'CORPSR_M4': 12000.0, 'CORPSR_M5': 13500.0, 'RIDAMF1': 0.30, 'RIDAMF2': 0.32, 'RIDAMF3': 0.28, 'RIDAMF4': 0.23,
+    'RIDAMF5': 0.20, 'RIDAMF6': 0.18, 'RIDAMF7': 0.15, 'CBTHSP': 2.5, 'CBRUSP': 4.5, 'DESCH1_MIN': 155.0,
+    'DESCH2_MIN': 155.0, 'TNVTRP1': 0.80, 'TNVTRP2': 0.90, 'TNVTRP3': 0.90, 'TNVTRP4': 0.90, 'TNVTRP5': 0.90,
+    'TNVTRP6': 0.9, 'TNVTRP7': 1.0, 'FTGM': 9500.0, 'LSP_Body': 1100.5, 'Entry_Body': 1020.0, 'FT_BODY': 855.0,
     'CT_BODY': 615.0, 'SLAB_QUALITY': 'C032', 'OPCCO': '0', 'LCBXON': 'N', 'ENDUSE': 'S', 'PASSNR': 5,
     'DescaleCondition': 'OK'
 }
