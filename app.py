@@ -143,8 +143,8 @@ optimizer = EdgeSeamOptimizer(model, imputer, scaler, encoder, top_features, thr
 # 3. หน้าตาแอปพลิเคชันบน Streamlit (UI/UX)
 # ==========================================
 st.title("🏭 Edge Seam Defect Prediction & Parameter Optimization")
-st.markdown("ระบบวิเคราะห์จุดเสี่ยงการเกิดเศษเหล็กแตกขอบและแนะนำการตั้งค่าพารามิเตอร์ลูกรีดอัตโนมัติ")
-st.hr()
+st.markdown("ระบบวิเคราะห์จุดเสี่ยงการเกิด Edge Seam Defect และแนะนำการตั้งค่าพารามิเตอร์ลูกรีดอัตโนมัติ")
+st.markdown("---")
 
 # ส่วนที่ 1: ข้อมูลกายภาพ/สเปคของชิ้นงาน (ควบคุมไม่ได้หน้างาน)
 st.subheader("📋 1. ข้อมูลคุณลักษณะเหล็กแผ่น (Uncontrollable Base Parameters)")
