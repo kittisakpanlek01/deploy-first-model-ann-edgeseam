@@ -171,8 +171,8 @@ tab_temp, tab_draft, tab_roll = st.tabs(["🌡️ อุณหภูมิแล
 
 with tab_temp:
     c1, c2, c3, c4 = st.columns(4)
-    with c1: ft_head = st.number_input("FT_HEAD (องศา)", value=860.0, step=10.0)
-    with c2: ct_head = st.number_input("CT_HEAD (องศา)", value=620.0, step=10.0)
+    with c1: ft_head = st.number_input("FT_HEAD (องศา)", value=850.0, step=10.0)
+    with c2: ct_head = st.number_input("CT_HEAD (องศา)", value=580.0, step=10.0)
     with c3: xvptf8 = st.number_input("XVPTF8 (ความเร็วลูกรีด)", value=8.5, step=0.5)
     with c4: rmextg = st.number_input("RMEXTG (BarThk)", value=32.0, step=1.0)
 
@@ -181,8 +181,8 @@ with tab_draft:
     with c1: psdrft1 = st.number_input("PSDRFT1 (Pass1 Draft)", value=42.2, step=0.5)
     with c2: psdrft2 = st.number_input("PSDRFT2 (Pass2 Draft)", value=48.1, step=0.5)
     with c3: psdrft3 = st.number_input("PSDRFT3 (Pass3 Draft)", value=48.6, step=0.5)
-    with c4: psdrft4 = st.number_input("PSDRFT4 (Pass4 Draft)", value=42.8, step=0.5)
-    with c5: psdrft5 = st.number_input("PSDRFT5 (Pass5 Draft)", value=32.2, step=0.5)
+    with c4: psdrft4 = st.number_input("PSDRFT4 (Pass4 Draft)", value=48.8, step=0.5)
+    with c5: psdrft5 = st.number_input("PSDRFT5 (Pass5 Draft)", value=50.2, step=0.5)
 
 with tab_roll:
     c1, c2, c3, c4, c5 = st.columns(5)
@@ -200,12 +200,12 @@ base_data = {
     'PSDRFT4': psdrft4, 'PSDRFT5': psdrft5, 'PSRCMS1': psrcms1, 'PSRCMS2': psrcms2, 'PSRCMS3': psrcms3,
     'PSRCMS4': psrcms4, 'PSRCMS5': psrcms5,
     # ตัวแปรเสริมอื่นๆ (เซ็ตเป็นค่ากลางเริ่มต้น)
-    'TEM_DIS': 1280.0, 'PSDRFT': 32.0, 'CORPSR_M1': 8500.0, 'CORPSR_M2': 10000.0, 'CORPSR_M3': 11000.0,
+    'TEM_DIS': 1260.0, 'PSDRFT': 50.2, 'CORPSR_M1': 8500.0, 'CORPSR_M2': 10000.0, 'CORPSR_M3': 11000.0,
     'CORPSR_M4': 12000.0, 'CORPSR_M5': 13500.0, 'RIDAMF1': 0.30, 'RIDAMF2': 0.32, 'RIDAMF3': 0.28, 'RIDAMF4': 0.23,
     'RIDAMF5': 0.20, 'RIDAMF6': 0.18, 'RIDAMF7': 0.15, 'CBTHSP': 2.5, 'CBRUSP': 4.5, 'DESCH1_MIN': 155.0,
     'DESCH2_MIN': 155.0, 'TNVTRP1': 0.80, 'TNVTRP2': 0.90, 'TNVTRP3': 0.90, 'TNVTRP4': 0.90, 'TNVTRP5': 0.90,
-    'TNVTRP6': 0.9, 'TNVTRP7': 1.0, 'FTGM': 9500.0, 'LSP_Body': 1100.5, 'Entry_Body': 1020.0, 'FT_BODY': 855.0,
-    'CT_BODY': 615.0, 'SLAB_QUALITY': 'C032', 'OPCCO': '0', 'LCBXON': 'N', 'ENDUSE': 'S', 'PASSNR': 5,
+    'TNVTRP6': 0.9, 'TNVTRP7': 1.0, 'FTGM': 9500.0, 'LSP_Body': 1080.5, 'Entry_Body': 1000.0, 'FT_BODY': 855.0,
+    'CT_BODY': 585.0, 'SLAB_QUALITY': 'C032', 'OPCCO': '0', 'LCBXON': 'N', 'ENDUSE': 'S', 'PASSNR': 5,
     'DescaleCondition': 'OK'
 }
 
